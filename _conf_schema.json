@@ -1,0 +1,62 @@
+{
+  "enable_temp_session_control": {
+    "description": "启用临时会话控制开关",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，临时会话将被阻止（仅作为开关，无白名单）"
+  },
+  "enable_friend_message_whitelist": {
+    "description": "启用好友私聊白名单",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，只有白名单中的好友私聊会被响应。可直接输入QQ号，系统会自动匹配"
+  },
+  "enable_group_message_whitelist": {
+    "description": "启用群聊白名单",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，只有白名单中的群聊会被响应。可直接输入QQ群号，系统会自动匹配"
+  },
+  "friend_message_whitelist": {
+    "description": "好友私聊白名单",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "好友私聊白名单列表，可直接输入QQ号（如：12345678），系统会自动匹配不同平台的格式"
+  },
+  "group_message_whitelist": {
+    "description": "群聊白名单",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "群聊白名单列表，可直接输入QQ群号（如：123456789），系统会自动匹配不同平台的格式"
+  },
+  "global_whitelist": {
+    "description": "全局白名单（可无视以上所有限制）",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "全局白名单，在此列表中的会话将无视所有限制。可直接输入QQ号或群号，系统会自动匹配"
+  },
+  "platform_ids": {
+    "description": "平台ID列表（用于自动匹配）",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "如果在配置中无法自动读取平台ID，请手动填入。例如：[\"qq\", \"telegram\", \"discord\"]。留空时插件会尝试从配置中自动读取"
+  },
+  "log_blocked_messages": {
+    "description": "记录被阻止的消息日志",
+    "type": "bool",
+    "default": true,
+    "hint": "启用后，当消息被阻止时会输出日志"
+  }
+}

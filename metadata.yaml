@@ -1,0 +1,6 @@
+name: advanced_whitelist_blacklist
+desc: 高级白名单黑名单插件，支持临时会话、好友私聊、群聊的独立控制和全局白名单黑名单
+version: 1.0.0
+author: AstrBot
+repo: https://github.com/AstrBotDevs/AstrBot
+
